@@ -1,1 +1,23 @@
-[{"title":"Test Title","text":"Test text"},{"title":"Test","text":"Hello World","id":"24bd314e-9604-4dfb-9f14-4f89e5e197f7"},{"title":"Test","text":"HelloWorld","id":"4084ef2c-02ff-4b48-8f1a-25955255da74"}]
+{
+  "notes": [
+    {
+      "title": "Test Title",
+      "text": "Test text"
+    },
+    {
+      "title": "Test",
+      "text": "Hello World",
+      "id": "24bd314e-9604-4dfb-9f14-4f89e5e197f7"
+    },
+    {
+      "title": "Test",
+      "text": "HelloWorld",
+      "id": "4084ef2c-02ff-4b48-8f1a-25955255da74"
+    },
+    {
+      "title": "Test",
+      "text": "Hello World 2",
+      "id": "b1e53623-f94a-4c07-9342-fdfe9f907999"
+    }
+  ]
+}

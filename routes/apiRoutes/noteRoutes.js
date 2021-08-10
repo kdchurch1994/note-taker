@@ -3,7 +3,7 @@ const { findById, createNote, noteValidation } = require('../../lib/notes');
 const notes = require('../../db/db.json');
 const fs = require("fs");
 const path = require("path");
-const { uuid } = require('uuidv4');;
+const { uuid } = require('uuidv4');
 
 
 router.get('/notes', (req, res) => {
@@ -13,7 +13,7 @@ router.get('/notes', (req, res) => {
 router.get('notes/:id', (req, res) => {
     const result = findById(req.params.id, notes);
     if (result) {
-        res.jon(result);
+        res.json(result);
     } else {
         res.send(404);
     }
