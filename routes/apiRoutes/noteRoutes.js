@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { findById, createNote, noteValidation } = require('../../lib/notes');
+const { createNote, noteValidation, findById } = require('../../lib/notes');
 const notes = require('../../db/db.json');
 const fs = require("fs");
 const path = require("path");
@@ -17,15 +17,6 @@ router.get('/notes', (req, res) => {
     });
 });
 
-router.get('notes/:id', (req, res) => {
-    const result = findById(req.params.id, notes);
-    if (result) {
-        res.json(result);
-    } else {
-        res.send(404);
-    }
-});
-
 router.post('/notes', (req, res) => {
     req.body.id = uuid();
     
@@ -37,5 +28,16 @@ router.post('/notes', (req, res) => {
         res.json(note);
     }
 });
+
+router.delete('/notes/:id', (req, res) => {
+    const noteData = findById(req.params.id)
+
+    if (noteData === -1) {
+        res.status(400).send("Please select a note to delete");
+    } 
+
+    notes.splice(noteData, 1)
+    res.json(notes)
+})
 
 module.exports = router;
