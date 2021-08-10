@@ -7,7 +7,14 @@ const { uuid } = require('uuidv4');
 
 
 router.get('/notes', (req, res) => {
-    res.json(notes);
+    fs.readFile(path.join(__dirname, '../../db/db.json'), (err, data) => {
+        let note = JSON.parse(data);
+        if (note) {
+            res.json(note);
+        } else {
+            res.send(404);
+        };
+    });
 });
 
 router.get('notes/:id', (req, res) => {
