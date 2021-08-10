@@ -3,7 +3,7 @@ const { findById, createNote, noteValidation } = require('../../lib/notes');
 const notes = require('../../db/db.json');
 const fs = require("fs");
 const path = require("path");
-const { v4: uuidv4 } = require('uuid');
+const { uuid } = require('uuidv4');;
 
 
 router.get('/notes', (req, res) => {
@@ -20,14 +20,13 @@ router.get('notes/:id', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-    req.body.id = uuidv4();
-    console.log(req.body);
-
+    req.body.id = uuid();
+    
     if (!noteValidation(req.body)) {
         res.status(400).send("This note it not formatted properly.");
     } else {
-        console.log(notes)
         const note = createNote(req.body, notes);
+        console.log(note);
         res.json(note);
     }
 });
