@@ -31,13 +31,13 @@ router.post('/notes', (req, res) => {
 
 router.delete('/notes/:id', (req, res) => {
     const noteData = findById(req.params.id)
-
+    console.log(noteData);
     if (!noteData) {
         res.status(400).send("Please select a note to delete");
-    } 
-
-    notes.splice(noteData, 1)
-    res.json(notes)
+    } else {
+        notes = noteData;
+        res.json(notes)
+    }
 })
 
 module.exports = router;
