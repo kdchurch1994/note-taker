@@ -1,32 +1,7 @@
 [
   {
-    "title": "Eleventh Note",
-    "text": "This POST route was tougher than I thought",
-    "id": "24168162-3ac5-4c8b-a206-7bca72c2988c"
-  },
-  {
-    "title": "Twelth Note",
-    "text": "This POST route was tougher than I thought",
-    "id": "e6b989c6-1e3d-4eab-9f5a-f1b0815c1987"
-  },
-  {
-    "title": "Front end test",
-    "text": "Hello",
-    "id": "08c16a70-a02d-4c0a-abd3-ccb8232e13d3"
-  },
-  {
     "title": "Hello",
-    "text": "Hello\n",
-    "id": "15f985d0-a2d5-4047-b771-b1a343844d4c"
-  },
-  {
-    "title": "Twelth Note",
-    "text": "This POST route was tougher than I thought",
-    "id": "c51f44d1-a7ef-428c-b85a-819904ec91cf"
-  },
-  {
-    "title": "Twelth Note",
-    "text": "This POST route was tougher than I thought",
-    "id": "20897b99-2281-4ab5-b0ff-997c9155d0b7"
+    "text": "Note",
+    "id": "ee1993a1-97bf-4932-9fe0-6d97c580dbb7"
   }
 ]

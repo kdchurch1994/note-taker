@@ -32,7 +32,7 @@ router.post('/notes', (req, res) => {
 router.delete('/notes/:id', (req, res) => {
     const noteData = findById(req.params.id)
 
-    if (noteData === -1) {
+    if (!noteData) {
         res.status(400).send("Please select a note to delete");
     } 
 
